@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>I LOVE YOU UCI SAYAAANG 🤍</title>
+  <style>
+    body {
+      background-color: #ffe6f0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      color: #ff4d6d;
+      text-align: center;
+      padding: 20px;
+    }
+    .heart {
+      width: 100px;
+      height: 100px;
+      background-color: #ff4d6d;
+      position: relative;
+      margin: 20px auto;
+      transform: rotate(-45deg);
+      animation: pulse 1.5s infinite;
+    }
+    .heart::before,
+    .heart::after {
+      content: "";
+      width: 100px;
+      height: 100px;
+      background-color: #ff4d6d;
+      border-radius: 50%;
+      position: absolute;
+    }
+    .heart::before {
+      top: -50px;
+      left: 0;
+    }
+    .heart::after {
+      left: 50px;
+      top: 0;
+    }
+    @keyframes pulse {
+      0% {
+        transform: rotate(-45deg) scale(1);
+      }
+      50% {
+        transform: rotate(-45deg) scale(1.2);
+      }
+      100% {
+        transform: rotate(-45deg) scale(1);
+      }
+    }
+    .love-text {
+      margin: 5px 0;
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+  <h1>I LOVE YOU UCI SAYAAANG 🤍</h1>
+  <div class="heart"></div>
+  <div id="container"></div>
+
+  <script>
+    const container = document.getElementById('container');
+    for (let i = 0; i < 100; i++) {
+      const p = document.createElement('p');
+      p.className = 'love-text';
+      p.textContent = 'I LOVE YOU UCI SAYAAANG 🤍';
+      container.appendChild(p);
+    }
+  </script>
+</body>
+</html>
